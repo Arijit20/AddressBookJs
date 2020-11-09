@@ -140,12 +140,12 @@ function searchContactByState(state) {
     return addressBookArr.filter((contact) => contact.state == state);
 }
 
-function viewContactsByCity(city){
+function viewContactsByCity(){
     addressBookArr.filter((contact) => contactsCityMap.set(contact.city, searchContactByCity(contact.city)));
     return contactsCityMap;
 }
 
-function viewContactsByState(state){
+function viewContactsByState(){
     addressBookArr.filter((contact) => contactsCityMap.set(contact.state, searchContactByCity(contact.state)));
     return contactsStateMap;
 }
